@@ -1,2 +1,1 @@
-# vinnerengpe
-Vinneren "Good Practices" Example
+# Vinneren "Good Practices"
