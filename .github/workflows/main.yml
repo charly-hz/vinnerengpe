@@ -12,7 +12,7 @@ jobs:
       - name: PR debe venir de la rama Staging
         run: |
           if [[ "${{ github.head_ref }}" != "staging" ]]; then
-            echo "Error: Pull requests to main are only allowed from the staging branch."
+            echo "Error: Todos los PR hacia main solo están permitidos desde la rama staging."
             exit 1
           fi
         shell: bash
