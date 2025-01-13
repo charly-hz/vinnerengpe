@@ -1,0 +1,18 @@
+name: Staging to Main PR Block
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check_staging_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR debe venir de la rama QA
+        run: |
+          if [[ "${{ github.head_ref }}" != "qa" ]]; then
+            echo "Error: Pull requests to main are only allowed from the qa branch."
+            exit 1
+          fi
+        shell: bash
